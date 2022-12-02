@@ -1,0 +1,14 @@
+{
+    "name": "flaaim/web-tempate",
+    "type": "tempate",
+    "description": "Laravel tempate to create a new project" ,
+    "keywords": ["template"],
+    "homepage": "https://github.com/Flaaim/template.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Grigorev",
+            "email": "flaeim@gmail.com"
+        }
+    ]
+}
