@@ -24,13 +24,24 @@ services:
     ports:
       - "33061:3306"
     environment:
-      - "MYSQL_ROOT_PASSWORD=secret"
-      - "MYSQL_USER=app"
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_USER=root"
       - "MYSQL_PASSWORD=secret"
-      - "MYSQL_DATABASE=app"
+      - "MYSQL_DATABASE=test2"
     volumes:
       - mysql_data:/var/lib/mysql
-  
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8888:80"
+    restart: always
+    environment:
+      - "PMA_HOST=mysql"
+      - "PMA_PORT=3306"
+    depends_on:
+      - mysql
+
+
 volumes:
   mysql_data:
 
